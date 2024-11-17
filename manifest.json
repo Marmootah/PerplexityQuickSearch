@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Perplexity AI Quick Access",
+    "version": "1.0",
+    "description": "Redirect @perplexity queries from Google to Perplexity AI",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["*://www.google.com/*", "*://google.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_start"
+      }
+    ]
+  }
